@@ -71,12 +71,18 @@ const loadAllPlants = (data) => {
         >
           ${cards.name}
         </h3>
-        <p class="text-sm text-gray-500">${cards.description}</p>
+        <p class="text-sm text-gray-500">
+        ${cards.description}
+        </p>
         <div class="flex justify-between items-center mt-4">
           <span class="text-sm bg-green-100 text-green-700 px-2 py-1 rounded"
-            >${cards.category}</span
+            >
+            ${cards.category}
+            </span
           >
-          <span class="font-semibold">৳${cards.price}</span>
+          <span class="font-semibold">
+          ৳${cards.price}
+          </span>
         </div>
         <button
           class="btn btn-block mt-5 bg-[#15803D] border-0 rounded-4xl shadow-none text-white hover:bg-[#24aa55]"
@@ -98,8 +104,12 @@ const loadAllPlants = (data) => {
         class="flex justify-between items-center mb-2 bg-[#F0FDF4] py-3 px-4 cartSignle"
       >
         <div>
-          <h1 class="mb-1 text-[#1F2937] font-semibold">${cards.name}</h1>
-          <p>৳<span class="item_price">${cards.price}</span></p>
+          <h1 class="mb-1 text-[#1F2937] font-semibold">
+          ${cards.name}
+          </h1>
+          <p>৳<span class="item_price">
+          ${cards.price}
+          </span></p>
         </div>
         <button class="btn btn-ghost button-cart">
           <i class="fa-solid fa-xmark"></i>
@@ -166,12 +176,18 @@ const displayViaCategory = (plantsData) => {
         >
           ${plant.name}
         </h3>
-        <p class="text-sm text-gray-500">${plant.description}</p>
+        <p class="text-sm text-gray-500">
+        ${plant.description}
+        </p>
         <div class="flex justify-between items-center mt-4">
           <span class="text-sm bg-green-100 text-green-700 px-2 py-1 rounded"
-            >${plant.category}</span
+            >
+            ${plant.category}
+            </span
           >
-          <span class="font-semibold">৳${plant.price}</span>
+          <span class="font-semibold">
+          ৳${plant.price}
+          </span>
         </div>
         <button
           class="btn btn-block mt-5 bg-[#15803D] border-0 rounded-4xl shadow-none text-white hover:bg-[#24aa55]"
@@ -192,8 +208,12 @@ const displayViaCategory = (plantsData) => {
         class="flex justify-between items-center mb-2 bg-[#F0FDF4] py-3 px-4 cartSignle"
       >
         <div>
-          <h1 class="mb-1 text-[#1F2937] font-semibold">${plant.name}</h1>
-          <p>৳<span class="item_price">${plant.price}</span></p>
+          <h1 class="mb-1 text-[#1F2937] font-semibold">
+          ${plant.name}
+          </h1>
+          <p>৳<span class="item_price">
+          ${plant.price}
+          </span></p>
         </div>
         <button class="btn btn-ghost button-cart">
           <i class="fa-solid fa-xmark"></i>
@@ -241,21 +261,29 @@ const modalDescription = (id) => {
   const modalDes = (details) => {
     const newModal = document.createElement("div");
     newModal.innerHTML = `
-        <h3 class="font-semibold mb-3 text-xl">${details.name}</h3>
+        <h3 class="font-semibold mb-3 text-xl">
+        ${details.name}
+        </h3>
       <div
         class="h-72 bg-gray-200 rounded overflow-hidden flex items-center justify-center"
       >
         <img class="w-full" src="${details.image}" alt="img" />
       </div>
       <h3 class="font-semibold mt-3">
-        Category: <span class="font-normal text-sm">${details.category}</span>
+        Category: <span class="font-normal text-sm">
+        ${details.category}
+        </span>
       </h3>
       <p class="text-black font-bold">
-        Price: ৳<span class="text-gray-500 font-normal">${details.price}</span>
+        Price: ৳<span class="text-gray-500 font-normal">
+        ${details.price}
+        </span>
       </p>
       <p class="text-sm text-black">
         Description:
-        <span class="text-gray-500 font-normal"> ${details.description}</span>
+        <span class="text-gray-500 font-normal">
+         ${details.description}
+         </span>
       </p>
   `;
     modalContainer.appendChild(newModal);
@@ -265,3 +293,12 @@ const modalDescription = (id) => {
 // default function call
 loadBtns();
 allPlantsLoad();
+
+/** 
+ const removeActive = () => {
+ const activeBtn = document.querySelectorAll(".activeBtn");
+ activeBtn.forEach((btn) => {
+ btn.classList.remove("bg-[#15803c]", "text-white", "hover:bg-[#15803c]");
+ });
+};
+*/
